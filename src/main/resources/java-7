@@ -1,0 +1,34 @@
+Technologie:  
+- Java 8;
+- JUnit 4;
+- Gradle;
+- Mockito;
+- HTML5 / CSS / JavaScript / jQuery;
+- Spring 4;
+- Rest / Spring MVC;
+- MySQL/H2;
+- Hibernate 5 / JDBC;
+- Tomcat 8/9;
+- Git;
+- Html Template Engine - wybrać; 
+- framework do logowania log4j/slf4j;
+- Guava.
+
+Projekt - propozycje:
+- serwis do mikroblogowania;
+
+Wymagania:
+- rejestracja/logowanie - 5;
+- management zawartości - dodawanie/edycja/kasowanie postów - 3;
+- strona profilu użytkownika - 3;
+- avatar dla użytkownika - 1;
+- wall - 5;
+- komentarze - 2;
+- likowanie - 1;
+- powiadomienia mailowe o nowej zawartości/likach - 8;
+- możliwość obserwowania postów i komentarzy - 3;
+- tagowanie - 2;
+- wzbogacanie zawartości postów (obrazki/video/emoji) - 3;
+
+
+
