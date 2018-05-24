@@ -1,15 +1,82 @@
 package pl.bpol.microbloge.model;
 
+import java.io.File;
+import java.util.Date;
 import java.util.Objects;
 
 public class User {
 
     private String login;
     private String password;
+    private String uniqueAccountName;
+    private String userAccountDescription;
+    // TODO: change this class for java 8 specific
+    private Date accountCreationDate;
+    private AccountStatus accountStatus;
+    private File userAvatar;
+    private AccountType accountType;
 
-    public User(String login, String password) {
+
+    public User(String login, String password, String uniqueAccountName, String userAccountDescription, Date accountCreationDate, AccountStatus accountStatus, File userAvatar, AccountType accountType) {
         this.login = login;
         this.password = password;
+        this.uniqueAccountName = uniqueAccountName;
+        this.userAccountDescription = userAccountDescription;
+        this.accountCreationDate = accountCreationDate;
+        this.accountStatus = accountStatus;
+        this.userAvatar = userAvatar;
+        this.accountType = accountType;
+    }
+
+    public User() {
+    }
+
+    public String getUniqueAccountName() {
+        return uniqueAccountName;
+    }
+
+    public void setUniqueAccountName(String uniqueAccountName) {
+        this.uniqueAccountName = uniqueAccountName;
+    }
+
+    public String getUserAccountDescription() {
+        return userAccountDescription;
+    }
+
+    public void setUserAccountDescription(String userAccountDescription) {
+        this.userAccountDescription = userAccountDescription;
+    }
+
+    public Date getAccountCreationDate() {
+        return accountCreationDate;
+    }
+
+    public void setAccountCreationDate(Date accountCreationDate) {
+        this.accountCreationDate = accountCreationDate;
+    }
+
+    public AccountStatus getAccountStatus() {
+        return accountStatus;
+    }
+
+    public void setAccountStatus(AccountStatus accountStatus) {
+        this.accountStatus = accountStatus;
+    }
+
+    public File getUserAvatar() {
+        return userAvatar;
+    }
+
+    public void setUserAvatar(File userAvatar) {
+        this.userAvatar = userAvatar;
+    }
+
+    public AccountType getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(AccountType accountType) {
+        this.accountType = accountType;
     }
 
     public String getLogin() {
@@ -33,6 +100,12 @@ public class User {
         return "User{" +
                 "login='" + login + '\'' +
                 ", password='" + password + '\'' +
+                ", uniqueAccountName='" + uniqueAccountName + '\'' +
+                ", userAccountDescription='" + userAccountDescription + '\'' +
+                ", accountCreationDate=" + accountCreationDate +
+                ", accountStatus=" + accountStatus +
+                ", userAvatar=" + userAvatar +
+                ", accountType=" + accountType +
                 '}';
     }
 
