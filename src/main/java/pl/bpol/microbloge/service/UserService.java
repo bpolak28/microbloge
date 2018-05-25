@@ -40,7 +40,15 @@ public class UserService {
         }
     }
 
-    public void deleteAccount(User user){
+    public boolean deleteAccount(User user){
+        log.debug("deleteAccount: " + user);
+        if(userDao.checkIfUserExists(user)){
+            userDao.deleteUser(user);
+            return true;
+        } else {
+            log.debug("trying to delete non existent user!");
+            return false;
+        }
 
     }
 

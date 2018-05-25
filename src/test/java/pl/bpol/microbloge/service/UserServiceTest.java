@@ -45,4 +45,18 @@ public class UserServiceTest {
 
     }
 
+    @Test
+    public void deleteAccount_success(){
+        when(dummyDao.checkIfUserExists(newUser)).thenReturn(true);
+
+        Assert.assertEquals(true,userService.deleteAccount(newUser));
+    }
+
+    @Test
+    public void deleteAccount_notExists(){
+        when(dummyDao.checkIfUserExists(newUser)).thenReturn(false);
+
+        Assert.assertEquals(false,userService.deleteAccount(newUser));
+    }
+
 }
