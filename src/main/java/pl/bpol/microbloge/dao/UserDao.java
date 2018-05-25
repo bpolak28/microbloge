@@ -12,4 +12,9 @@ public interface UserDao {
 
     void updateUser(User user);
 
+    boolean checkIfPasswordMissmatch(User user);
+
+    boolean checkIsLoginCorrect(User user);
+
+    boolean checkIsPasswordCorrect(User user);
 }
