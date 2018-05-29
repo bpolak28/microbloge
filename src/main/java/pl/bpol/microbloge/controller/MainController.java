@@ -42,6 +42,6 @@ public class MainController {
         } else if(result == RegistrationResult.USER_ALREADY_EXISTS){
             response = "Registration-already-exists";
         }
-        return "greeting";
+        return "redirect:greeting";
     }
 }

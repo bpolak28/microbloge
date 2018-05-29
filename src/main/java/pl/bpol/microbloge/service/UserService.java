@@ -6,14 +6,20 @@ import org.apache.logging.log4j.Logger;
 import pl.bpol.microbloge.dao.UserDao;
 import pl.bpol.microbloge.model.RegistrationResult;
 import pl.bpol.microbloge.model.User;
+import pl.bpol.microbloge.repository.UserRepository;
 
 public class UserService {
 
     private static Logger log = LogManager.getLogger(UserService.class);
+    private UserRepository userRepository;
     private UserDao userDao;
 
     public UserService(UserDao userDao) {
         this.userDao = userDao;
+    }
+
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     public UserService(){

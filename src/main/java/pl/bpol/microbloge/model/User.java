@@ -2,12 +2,19 @@ package pl.bpol.microbloge.model;
 
 import com.google.common.base.Preconditions;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.File;
 import java.util.Date;
 import java.util.Objects;
 
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue
+    private Long id;
     private String login;
     private String password1;
     private String password2;

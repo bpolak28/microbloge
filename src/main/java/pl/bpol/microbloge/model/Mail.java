@@ -1,9 +1,16 @@
 package pl.bpol.microbloge.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class Mail {
 
+    @Id
+    @GeneratedValue
+    private long id;
     private String address;
     private String Subject;
     private String note;
