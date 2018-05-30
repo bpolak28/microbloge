@@ -6,15 +6,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import pl.bpol.microbloge.dao.UserDao;
 import pl.bpol.microbloge.model.RegistrationResult;
 import pl.bpol.microbloge.model.User;
+import pl.bpol.microbloge.service.PostService;
 import pl.bpol.microbloge.service.UserService;
 
 @Controller
 public class MainController {
 
     UserService userService;
+
+    PostService postService;
 
     public MainController() {
     }
@@ -42,6 +44,11 @@ public class MainController {
         } else if(result == RegistrationResult.USER_ALREADY_EXISTS){
             response = "Registration-already-exists";
         }
-        return "redirect:greeting";
+        return "redirect:/giveMeAllUsers";
+    }
+
+    @RequestMapping(value = "/editpost", method = RequestMethod.GET)
+    public String editNewPost(Model model){
+        postService.
     }
 }

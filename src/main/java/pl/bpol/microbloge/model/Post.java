@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
-public class Post {
+public class Post implements Comparable<Post> {
 
     @Id
     @GeneratedValue
@@ -17,16 +17,34 @@ public class Post {
     private PostStatus postStatus;
     private PostType postType;
     private User postAuthor;
+    private String postHeader;
 
     public Post() {
     }
 
-    public Post(String note, Date creationDate, PostStatus postStatus, PostType postType, User postAuthor) {
+    public Post(String note, Date creationDate, PostStatus postStatus, PostType postType, User postAuthor, String postHeader) {
         this.note = note;
         this.creationDate = creationDate;
         this.postStatus = postStatus;
         this.postType = postType;
         this.postAuthor = postAuthor;
+        this.postHeader = postHeader;
+    }
+
+    public String getPostHeader() {
+        return postHeader;
+    }
+
+    public void setPostHeader(String postHeader) {
+        this.postHeader = postHeader;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getNote() {
@@ -96,5 +114,10 @@ public class Post {
                 ", postType=" + postType +
                 ", postAuthor=" + postAuthor +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Post o) {
+        return this.getCreationDate()-o.getCreationDate();
     }
 }

@@ -3,6 +3,7 @@ package pl.bpol.microbloge.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
@@ -14,6 +15,7 @@ public class Mail {
     private String address;
     private String Subject;
     private String note;
+    private LocalDateTime dateOfMailSending;
 
     public Mail() {
     }
@@ -22,6 +24,22 @@ public class Mail {
         this.address = address;
         Subject = subject;
         this.note = note;
+    }
+
+    public LocalDateTime getDateOfMailSending() {
+        return dateOfMailSending;
+    }
+
+    public void setDateOfMailSending(LocalDateTime dateOfMailSending) {
+        this.dateOfMailSending = dateOfMailSending;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getAddress() {

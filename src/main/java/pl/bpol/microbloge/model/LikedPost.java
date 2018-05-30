@@ -26,6 +26,14 @@ public class LikedPost {
         this.date = date;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public User getWho() {
         return who;
     }
