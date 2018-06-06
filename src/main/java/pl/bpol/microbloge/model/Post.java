@@ -118,6 +118,6 @@ public class Post implements Comparable<Post> {
 
     @Override
     public int compareTo(Post o) {
-        return this.getCreationDate()-o.getCreationDate();
+        return this.getCreationDate().compareTo(o.getCreationDate());
     }
 }
