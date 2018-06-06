@@ -25,7 +25,6 @@ public class WallService {
 
     public List<Post> sortedDatePosts(){
         List<Post> wallPosts = wall.getWallPosts();
-        wallPosts
-        return
+        return wallPosts;
     }
 }

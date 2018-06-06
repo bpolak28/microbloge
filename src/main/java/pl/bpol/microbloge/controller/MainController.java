@@ -47,8 +47,8 @@ public class MainController {
         return "redirect:/giveMeAllUsers";
     }
 
-    @RequestMapping(value = "/editpost", method = RequestMethod.GET)
-    public String editNewPost(Model model){
-        postService.
-    }
+//    @RequestMapping(value = "/editpost", method = RequestMethod.GET)
+//    public String editNewPost(Model model){
+//        return
+//    }
 }
