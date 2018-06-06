@@ -21,6 +21,7 @@ public class MailServiceImpl implements MailService {
     @Override
     public boolean sendEmailToUser(String address, String title, String message,String from) {
 
+        boolean result = true;
         SimpleMailMessage myMessage = new SimpleMailMessage();
         myMessage.setTo(address);
         myMessage.setSubject(title);
@@ -30,10 +31,11 @@ public class MailServiceImpl implements MailService {
         try{
             mailSender.send(myMessage);
         }catch (MailException e){
+            result = false;
             System.err.println("Error occured during mail sanding: [%s]"+e);
         }
 
 
-        return false;
+        return result;
     }
 }
