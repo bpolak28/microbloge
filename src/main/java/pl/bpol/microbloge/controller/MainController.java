@@ -16,12 +16,18 @@ public class MainController {
 
     UserService userService;
 
-    PostService postService;
-
     public MainController() {
     }
 
     public MainController(UserService userService) {
+        this.userService = userService;
+    }
+
+    public UserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(UserService userService) {
         this.userService = userService;
     }
 

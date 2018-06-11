@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity
-public class Post implements Comparable<Post> {
+public class Post {
 
     @Id
     @GeneratedValue
@@ -116,8 +116,4 @@ public class Post implements Comparable<Post> {
                 '}';
     }
 
-    @Override
-    public int compareTo(Post o) {
-        return this.getCreationDate().compareTo(o.getCreationDate());
-    }
 }
